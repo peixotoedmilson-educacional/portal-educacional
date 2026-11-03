@@ -40,7 +40,7 @@ def carregar_dados_reais():
     
     for escola in escolas:
         for grupo in grupos_etarios:
-            if "NEI" in escola and "Fundamental" in grupo:
+            if "NEI" in school and "Fundamental" in grupo:
                 matriculas = 0
             elif "EMEB" in escola and "Creche" in grupo:
                 matriculas = np.random.randint(0, 15)
@@ -85,15 +85,15 @@ if grupo_selecionado != "Todos os Grupos":
 total_matriculas = df_filtrado["Total de Matrículas"].sum()
 total_escolas_ativas = df_filtrado["Unidade Escolar"].nunique()
 
-c1, c2 = st.columns(2)
-with c1:
+col_m1, col_m2 = st.columns(2)
+with col_m1:
     st.metric(label="👥 Total de Alunos no Filtro Selecionado", value=f"{total_matriculas:,}")
-with c2:
+with col_m2:
     st.metric(label="🏫 Unidades Escolares Mapeadas", value=total_escolas_ativas)
 
 st.markdown("---")
 
-col_grafico, col_tabela = st.columns()
+col_grafico, col_tabela = st.columns(2)
 
 with col_grafico:
     st.write("### 📊 Distribuição Estatística")
@@ -118,4 +118,4 @@ with col_tabela:
     )
 
 st.markdown("---")
-st.info("🔄 **Modo de Atualização Contínua:** Este painel está pronto para receber conexões via API Rest ou Webhooks do sistema de gestão escolar da SEMED, mudando os indicadores de forma automatizada sem intervenção humana.")
+st.info("🔄 **Modo de Aktualização Contínua:** Este painel está pronto para receber conexões via API Rest ou Webhooks do sistema de gestão escolar da SEMED, mudando os indicadores de forma automatizada sem intervenção humana.")
