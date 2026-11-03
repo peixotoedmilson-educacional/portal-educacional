@@ -40,7 +40,7 @@ def carregar_dados_reais():
     
     for escola in escolas:
         for grupo in grupos_etarios:
-            if "NEI" in school and "Fundamental" in grupo:
+            if "NEI" in escola and "Fundamental" in grupo:
                 matriculas = 0
             elif "EMEB" in escola and "Creche" in grupo:
                 matriculas = np.random.randint(0, 15)
@@ -118,4 +118,4 @@ with col_tabela:
     )
 
 st.markdown("---")
-st.info("🔄 **Modo de Aktualização Contínua:** Este painel está pronto para receber conexões via API Rest ou Webhooks do sistema de gestão escolar da SEMED, mudando os indicadores de forma automatizada sem intervenção humana.")
+st.info("🔄 **Modo de Atualização Contínua:** Este painel está pronto para receber conexões via API Rest ou Webhooks do sistema de gestão escolar da SEMED, mudando os indicadores de forma automatizada sem intervenção humana.")
